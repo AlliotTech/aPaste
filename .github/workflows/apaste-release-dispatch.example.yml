@@ -1,0 +1,22 @@
+name: notify homebrew tap
+
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - published
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify homebrew tap
+        env:
+          GH_TOKEN: ${{ secrets.TAP_DISPATCH_TOKEN }}
+        run: |
+          curl --fail --silent --show-error \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            https://api.github.com/repos/AlliotTech/homebrew-tap/dispatches \
+            -d '{"event_type":"apaste_release_published"}'
