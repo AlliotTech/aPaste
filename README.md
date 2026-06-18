@@ -2,9 +2,8 @@
 
 ### Your clipboard history, one shortcut away.
 
-[![macOS](https://img.shields.io/badge/macOS-13%2B-black?logo=apple&logoColor=white)](https://github.com/AlliotTech/aPaste/releases/latest)
+[![macOS](https://img.shields.io/badge/macOS-15%2B-black?logo=apple&logoColor=white)](https://github.com/AlliotTech/aPaste/releases/latest)
 [![GitHub release](https://img.shields.io/github/v/release/AlliotTech/aPaste?color=blue)](https://github.com/AlliotTech/aPaste/releases/latest)
-[![License](https://img.shields.io/github/license/AlliotTech/aPaste)](LICENSE)
 
 aPaste is a fast, keyboard-first clipboard manager for macOS. Open a beautiful panel, search everything you copied, keep important snippets on pinboards, and paste back into your workflow without breaking focus.
 
@@ -25,18 +24,21 @@ One shortcut opens your full clipboard timeline with rich previews, fast search,
 
 ## Why aPaste
 
-- **Recall anything instantly** — Browse your clipboard history in a focused panel built for fast scanning and quick paste-back
+- **Recall anything instantly** — Browse your clipboard history in a focused panel built for fast scanning, search filters, and quick paste-back
 - **Keep what matters** — Save recurring snippets, links, and assets to pinboards instead of losing them in a long history
 - **Stay in flow** — Navigate, search, and paste without touching the mouse
 - **Present safely** — Ignore sensitive apps and hide preview contents when you need privacy
+- **Sync on your terms** — Optionally sync via a folder you control, with encrypted metadata/content support
 - **Feel native on macOS** — Menu bar app, no Dock icon, no clutter, no friction
 
 ## Features
 
 - **Never lose a copy** — Full clipboard history, captured automatically from every app                      
 - **Pinboards** — Save snippets to color-coded boards, always one shortcut away, never auto-deleted
-- **Instant search** — Fuzzy search across your entire history as you type
-- **Privacy controls** — Ignore specific apps, hide contents from screenshots                                
+- **Rich previews** — Styled text, links, colors, images, and files render as scannable cards
+- **Instant search** — Search as you type, then narrow by type, date, or source app
+- **Privacy controls** — Ignore specific apps, skip transient/confidential pasteboard content, hide contents from screenshots
+- **Folder sync** — Sync history and pinboards through Syncthing, Dropbox, iCloud Drive, or any shared folder
 - **Zero footprint** — No Dock icon. No splash screen. Starts at login. Runs silently
 
 ## Screenshots
@@ -60,7 +62,7 @@ One shortcut opens your full clipboard timeline with rich previews, fast search,
 
 ## Keyboard Shortcuts
 
-All shortcuts are customizable in Settings → Shortcuts.
+Most command shortcuts are customizable in Settings → Shortcuts; fixed panel navigation shortcuts are listed for reference.
 
 | Action | Default |
 |:---|:---|
@@ -69,6 +71,12 @@ All shortcuts are customizable in Settings → Shortcuts.
 | Next Pinboard | `⌘ →` |
 | Previous Pinboard | `⌘ ←` |
 | Create Pinboard | `⌘ ⇧ N` |
+| Toggle search | `⌘ F` |
+| Jump to source context | `⌘ G` |
+| Copy and close | `⌘ C` |
+| Select all cards | `⌘ A` |
+| Undo delete | `⌘ Z` |
+| Open Settings | `⌘ ,` |
 | Paste selected item | `↩` |
 | Search history | Type anything |
 | Navigate items | `← ↑ ↓ →` |
@@ -85,7 +93,7 @@ brew install --cask alliottech/tap/apaste --no-quarantine
 
 ### Manual
 
-Download the [latest DMG](https://github.com/AlliotTech/aPaste/releases/latest), drag `aPaste.app` to `/Applications`, then remove the quarantine flag:
+Download the [latest architecture-matched DMG](https://github.com/AlliotTech/aPaste/releases/latest), drag `aPaste.app` to `/Applications`, then remove the quarantine flag:
 
 ```bash
 xattr -d com.apple.quarantine /Applications/aPaste.app
@@ -94,4 +102,3 @@ xattr -d com.apple.quarantine /Applications/aPaste.app
 ## Requirements
 
 macOS 15 or later.
-
