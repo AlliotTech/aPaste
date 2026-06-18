@@ -88,7 +88,8 @@ Most command shortcuts are customizable in Settings → Shortcuts; fixed panel n
 
 ```bash
 brew tap alliottech/tap
-brew install --cask alliottech/tap/apaste --no-quarantine
+brew install --cask alliottech/tap/apaste
+xattr -d com.apple.quarantine /Applications/aPaste.app
 ```
 
 ### Manual
