@@ -13,7 +13,8 @@ aPaste is a fast, keyboard-first clipboard manager for macOS. Open a beautiful p
 
 ```bash
 brew tap alliottech/tap
-brew install --cask alliottech/tap/apaste --no-quarantine
+brew install --cask alliottech/tap/apaste
+xattr -d com.apple.quarantine /Applications/aPaste.app
 ```
 
 | Dark | Light |
