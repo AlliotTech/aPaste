@@ -1,5 +1,7 @@
 # aPaste
 
+English | [简体中文](README.zh-CN.md)
+
 ### Your clipboard history, one shortcut away.
 
 [![macOS](https://img.shields.io/badge/macOS-15%2B-black?logo=apple&logoColor=white)](https://github.com/AlliotTech/aPaste/releases/latest)
